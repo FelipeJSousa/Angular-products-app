@@ -26,4 +26,9 @@ export class DepartmentService {
     });
     console.log(this._departments);
   }
+
+  getDepartment(id:number):Department{
+    return this._departments.find((d) => d.id === id);
+  }
+
 }
