@@ -42,6 +42,7 @@ export class ProductService {
       id: this._products[this._products.length-1].id+1,
       ...p
     })
+    console.log(this._products);
   }
 
 }
