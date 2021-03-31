@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { DepartmentService } from './department.service';
 import { Product } from './models/prdoduct.model';
 
@@ -15,6 +15,8 @@ export class ProductService {
   ]
   
   private _products: Product[] = [];
+
+  onNewProduct: EventEmitter<Product> = new EventEmitter<Product>();
   
   constructor(
     private _departmentService : DepartmentService
@@ -38,11 +40,13 @@ export class ProductService {
   }
 
   addProduct(p: Product){
-    this._products.push({
+    let product: Product = {
       id: this._products[this._products.length-1].id+1,
       ...p
-    })
+    }
+    this._products.push(product)
     console.log(this._products);
+    this.onNewProduct.emit(product);
   }
 
 }

@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatButtonModule } from '@angular/material/button'
 import { MatSelectModule } from '@angular/material/select'
+import { MatTableModule } from '@angular/material/table'
 
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms'
@@ -33,7 +34,8 @@ import { ProductsTableComponent } from './products-table/products-table.componen
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
-    FormsModule
+    FormsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
