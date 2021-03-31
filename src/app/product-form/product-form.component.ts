@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Department } from '../models/department.model';
 
 @Component({
   selector: 'app-product-form',
@@ -7,9 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductFormComponent implements OnInit {
 
+  name: string;
+  departments: Department[];
+  department: Department;
+  description: string;
+  price: number;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  save(){
+
+  }
+
+  clear(){
+
   }
 
 }
