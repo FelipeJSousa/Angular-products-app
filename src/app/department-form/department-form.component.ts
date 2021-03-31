@@ -23,6 +23,7 @@ export class DepartmentFormComponent implements OnInit {
       name: this.depName
     })
     this.depName = "";
+    this.clear()
   }
 
   clear(){

@@ -29,8 +29,8 @@ export class ProductFormComponent implements OnInit {
     this._productService.addProduct({
       name: this.name,
       price: this.price,
-      description: this.description,
-      department: this.department
+      department: this.department,
+      description: this.description
     })
     this.clear();
   }
